@@ -1,0 +1,8 @@
+__pycache__/
+*.py[cod]
+*.so
+*.egg-info/
+dist/
+build/
+
+env/lib/python3.12/site-packages/
