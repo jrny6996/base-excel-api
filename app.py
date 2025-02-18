@@ -2,36 +2,92 @@ from flask import Flask, request, jsonify, render_template
 import json
 from flask_cors import CORS
 import sqlite3
+from flask import g
+import os
+import random
+import inflect
 
 app = Flask(__name__)
 CORS(app)
 
-@app.route("/", methods = ["GET"])
+DATABASE = './db/base_excel.db'
+
+p = inflect.engine()
+
+def get_db():
+    db = getattr(g, '_database', None)
+    if db is None:
+        db = g._database = sqlite3.connect(DATABASE)
+        db.row_factory = sqlite3.Row  # Enable dictionary-like access
+    return db
+
+@app.teardown_appcontext
+def close_connection(exception):
+    db = getattr(g, '_database', None)
+    if db is not None:
+        db.close()
+
+def query_db(query, args=(), one=False):
+    cur = get_db().execute(query, args)
+    rv = cur.fetchall()
+    cur.close()
+    return (rv[0] if rv else None) if one else rv
+
+def make_messy(data):
+    messy_data = {}
+    for key, value in data.items():
+        if random.random() < 0.2:  # 1 in 5 chance to modify
+            if isinstance(value, int):
+                messy_data[key] = p.number_to_words(value)  # Convert number to words
+            elif isinstance(value, str):
+                if random.choice([True, False]):
+                    messy_data[key] = value + "\\"  # Add trailing backslash
+                else:
+                    messy_data[key] = f'"{value}"'  # Wrap string in quotes
+            else:
+                messy_data[key] = value
+        else:
+            messy_data[key] = value  # Keep original value
+    return messy_data
+
+@app.route("/", methods=["GET"])
 def index():
     return render_template("index.html")
 
-@app.route("/guides", methods = ["GET"])
+@app.route("/guides", methods=["GET"])
 def guides():
     return render_template("guides.html")
 
-
-
 # API routes
-@app.route("/api/january", methods = ["POST"])
+@app.route("/api/january", methods=["POST"])
 def monthly_data():
-    if request.json["key"] == 1234:
-        return jsonify("message: success, content: monthly content")
+    if request.json.get("key") == 1234:
+        purchase_data = query_db("SELECT * FROM Purchases WHERE strftime('%m', purchase_date) = '01';")
+        employee_data = query_db("SELECT * FROM Employees;")
+        customer_data = query_db("SELECT * FROM Customers;")
+        
+        purchases = [make_messy(dict(row)) for row in purchase_data]
+        employees = [make_messy(dict(row)) for row in employee_data]
+        customers = [make_messy(dict(row)) for row in customer_data]
+        
+        return jsonify({"purchases": purchases, "employees": employees, "customers": customers})
     else:
-        return jsonify("message: sorry there was an err accessing your material")
-    
-@app.route("/api/2024", methods = ["POST"])
+        return jsonify({"message": "Sorry, there was an error accessing your material"}), 403
+
+@app.route("/api/2024", methods=["POST"])
 def yearly_data():
-    if request.json["key"] == 1234:
-        return jsonify("message: success, content: yearly content")
+    if request.json.get("key") == 1234:
+        purchase_data = query_db("SELECT * FROM Purchases WHERE strftime('%Y', purchase_date) = '2024';")
+        employee_data = query_db("SELECT * FROM Employees;")
+        customer_data = query_db("SELECT * FROM Customers;")
+        
+        purchases = [make_messy(dict(row)) for row in purchase_data]
+        employees = [make_messy(dict(row)) for row in employee_data]
+        customers = [make_messy(dict(row)) for row in customer_data]
+        
+        return jsonify({"purchases": purchases, "employees": employees, "customers": customers})
     else:
-        return jsonify("message: sorry there was an err accessing your material")
-
-
+        return jsonify({"message": "Sorry, there was an error accessing your material"}), 403
 
 if __name__ == "__main__":
     app.run(port=8080, debug=True)
