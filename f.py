@@ -1,3 +1,8 @@
+"""
+This is for my finance class lmaoooo.
+"""
+
+
 arr = []
 
 ans_1 = 1000 * (1/(1.14)**20) + 105 * ((1 - (1/(1.4)**20))/.14)

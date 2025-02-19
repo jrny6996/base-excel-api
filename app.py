@@ -38,7 +38,8 @@ def make_messy(data):
     for key, value in data.items():
         if random.random() < 0.2:  # 1 in 5 chance to modify
             if isinstance(value, int):
-                messy_data[key] = p.number_to_words(value)  # Convert number to words
+                pass
+                #messy_data[key] = p.number_to_words(value)  # Convert number to words
             elif isinstance(value, str):
                 if random.choice([True, False]):
                     messy_data[key] = value + "\\"  # Add trailing backslash
@@ -61,7 +62,8 @@ def guides():
 # API routes
 @app.route("/api/january", methods=["POST"])
 def monthly_data():
-    if request.json.get("key") == 1234:
+    print(request.json)
+    if request.json["key"] == 1234:
         purchase_data = query_db("SELECT * FROM Purchases WHERE strftime('%m', purchase_date) = '01';")
         employee_data = query_db("SELECT * FROM Employees;")
         customer_data = query_db("SELECT * FROM Customers;")
