@@ -34,13 +34,23 @@ def query_db(query, args=(), one=False):
     cur.close()
     return (rv[0] if rv else None) if one else rv
 
-def make_messy(data):
+def make_messy(data, modify_prob=0.2, remove_prob=0.1):
+    """
+    Modifies data with a given probability, and optionally removes keys.
+
+    Args:
+        data: The input dictionary.
+        modify_prob: The probability of modifying a value.
+        remove_prob: The probability of removing a key.
+    """
     messy_data = {}
     for key, value in data.items():
-        if random.random() < 0.0:  # 1 in 5 chance to modify
+        if random.random() < remove_prob:
+            # Randomly remove key
+            continue #skip to the next iteration of the loop, thereby skipping the key.
+        if random.random() < modify_prob:  # Modify with a probability
             if isinstance(value, int):
-                pass
-                #messy_data[key] = p.number_to_words(value)  # Convert number to words
+                messy_data[key] = p.number_to_words(value)  # Convert number to words
             elif isinstance(value, str):
                 if random.choice([True, False]):
                     messy_data[key] = value + "/"  # Add trailing backslash

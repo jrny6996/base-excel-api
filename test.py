@@ -2,7 +2,6 @@ import requests
 import csv
 
 url = "https://base-excel.vercel.app/api/january"
-url = "http://localhost:8080/api/january"
 data = {"key": 1234}
 response = requests.post(url, json=data)
 
