@@ -37,7 +37,7 @@ def query_db(query, args=(), one=False):
 def make_messy(data):
     messy_data = {}
     for key, value in data.items():
-        if random.random() < 0.0:  # 1 in 5 chance to modify
+        if random.random() < 0.2:  # 1 in 5 chance to modify
             if isinstance(value, int):
                 # Convert number to words
                 # messy_data[key] = p.number_to_words(value)  
