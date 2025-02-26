@@ -72,6 +72,10 @@ def monthly_data():
         purchases = [make_messy(dict(row)) for row in purchase_data]
         employees = [make_messy(dict(row)) for row in employee_data]
         customers = [make_messy(dict(row)) for row in customer_data]
+
+        purchases = purchase_data
+        employees = employee_data
+        customers = customer_data
         
         return jsonify({"purchases": purchases, "employees": employees, "customers": customers})
     else:

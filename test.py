@@ -7,7 +7,6 @@ response = requests.post(url, json=data)
 
 if response.status_code == 200:
     data = response.json()
-    print(data)
 else:
     print(f"Failed to fetch data. Status code: {response.status_code}")
     exit()
@@ -19,6 +18,7 @@ emp_data = data["employees"]
 
 # Write purchases data
 with open("purchases.csv", mode='w', newline='', encoding="utf-8-sig") as file:
+    print(pur_data[0])
     writer = csv.DictWriter(file, fieldnames=pur_data[0].keys())
     writer.writeheader()
     writer.writerows(pur_data)
