@@ -37,7 +37,7 @@ def query_db(query, args=(), one=False):
 def make_messy(data):
     messy_data = {}
     for key, value in data.items():
-        if random.random() < 0.2:  # 1 in 5 chance to modify
+        if random.random() < 0.0:  # 1 in 5 chance to modify
             if isinstance(value, int):
                 pass
                 #messy_data[key] = p.number_to_words(value)  # Convert number to words
@@ -73,9 +73,6 @@ def monthly_data():
         employees = [make_messy(dict(row)) for row in employee_data]
         customers = [make_messy(dict(row)) for row in customer_data]
 
-        purchases = purchase_data
-        employees = employee_data
-        customers = customer_data
         
         return jsonify({"purchases": purchases, "employees": employees, "customers": customers})
     else:
