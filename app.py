@@ -6,6 +6,7 @@ from flask import g
 import os
 import random
 import inflect
+import markdown
 
 app = Flask(__name__)
 CORS(app)
@@ -87,9 +88,21 @@ def yearly_data():
         employees = [make_messy(dict(row)) for row in employee_data]
         customers = [make_messy(dict(row)) for row in customer_data]
         
-        return jsonify({"purchases": purchases, "employees": employees, "customers": customers})
+        return jsonify({"purchases": json.dumps(purchases), "employees": json.dumps(employees), "customers": json.dumps(customers)})
     else:
         return jsonify({"message": "Sorry, there was an error accessing your material"}), 403
+    
+
+
+@app.route("/guides/workshop-one") 
+def guide_one():
+    
+    return render_template("ws1.html")
+    
+
+@app.route("/test")
+def test():
+    return render_template("test.html")
 
 if __name__ == "__main__":
     app.run(port=8080, debug=True)
