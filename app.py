@@ -88,7 +88,7 @@ def yearly_data():
         employees = [make_messy(dict(row)) for row in employee_data]
         customers = [make_messy(dict(row)) for row in customer_data]
         
-        return jsonify({"purchases": json.dumps(purchases), "employees": json.dumps(employees), "customers": json.dumps(customers)})
+        return jsonify({"purchases": purchases, "employees": employees, "customers": customers})
     else:
         return jsonify({"message": "Sorry, there was an error accessing your material"}), 403
     
