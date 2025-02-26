@@ -43,7 +43,7 @@ def make_messy(data):
                 #messy_data[key] = p.number_to_words(value)  # Convert number to words
             elif isinstance(value, str):
                 if random.choice([True, False]):
-                    messy_data[key] = value + "\\"  # Add trailing backslash
+                    messy_data[key] = value + "/"  # Add trailing backslash
                 else:
                     messy_data[key] = f'"{value}"'  # Wrap string in quotes
             else:

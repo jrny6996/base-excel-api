@@ -18,19 +18,21 @@ cus_data = data["customers"]
 emp_data = data["employees"]
 
 # Write purchases data
-with open("purchases.csv", mode='w', newline='') as file:
+with open("purchases.csv", mode='w', newline='', encoding="utf-8-sig") as file:
     writer = csv.DictWriter(file, fieldnames=pur_data[0].keys())
     writer.writeheader()
     writer.writerows(pur_data)
 
 # Write customers data
-with open("customers.csv", mode='w', newline='') as file:
+with open("customers.csv", mode='w', newline='', encoding="utf-8-sig") as file:
     writer = csv.DictWriter(file, fieldnames=cus_data[0].keys())
     writer.writeheader()
     writer.writerows(cus_data)
 
 # Write employees data
-with open("employees.csv", mode='w', newline='') as file:
+with open("employees.csv", mode='w', newline='', encoding="utf-8-sig") as file:
     writer = csv.DictWriter(file, fieldnames=emp_data[0].keys())
     writer.writeheader()
     writer.writerows(emp_data)
+
+print("success")
