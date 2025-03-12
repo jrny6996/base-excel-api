@@ -1,7 +1,101 @@
 ﻿created_at,employee_id,hire_date,name,position
-2025-02-17 14:27:18,1,2023-05-10,Emma Wilson,Sales Associate/
-2025-02-17 14:27:18,2,2022-08-15,Liam Brown,Manager
+2025-02-17 14:27:18,1,2023-05-10,Emma Wilson,Sales Associate
+2025-02-17 14:27:18,2,2022-08-15/,Liam Brown,Manager
 2025-02-17 14:27:18,3,2024-01-05,Olivia Martinez,Cashier
-2025-02-17 14:27:18,4,2021-11-20,Noah Anderson,Sales Associate
-"""2025-02-17 14:27:18""",5,2019-06-30,Sophia White/,Manager
-2025-02-17 14:27:18/,6,2020-04-25,Mason Harris,Cashier
+2025-02-17 14:27:18,4,2021-11-20,"""Noah Anderson""",Sales Associate
+"""2025-02-17 14:27:18""",5,2019-06-30,Sophia White,Manager
+2025-02-17 14:27:18,6,2020-04-25,Mason Harris/,Cashier
+2025-03-10 17:01:16,7,2020-01-15/,Alice Smith/,Software Engineer
+2025-03-10 17:01:16,8,2021-03-22,Bob Johnson,Data Scientist/
+2025-03-10 17:01:16,9,2019-11-01,Carol Williams,Product Manager
+2025-03-10 17:01:16,10,2022-05-10/,David Brown,UX Designer
+2025-03-10 17:01:16,11,2020-08-03,Eve Davis,Marketing Specialist/
+2025-03-10 17:01:16,12,2021-12-18,Frank Miller,Sales Representative/
+2025-03-10 17:01:16,13,2018-09-27,Grace Wilson/,Financial Analyst
+2025-03-10 17:01:16,14,2023-02-08,Henry Moore,Human Resources Manager
+2025-03-10 17:01:16,15,2020-06-12,Ivy Taylor,Customer Support
+2025-03-10 17:01:16,16,2022-09-25,Jack Anderson,Project Manager
+2025-03-10 17:01:16,17,2019-04-30,Katie Thomas/,Software Developer
+2025-03-10 17:01:16,18,2021-07-14,"""Liam Jackson""",Data Analyst
+2025-03-10 17:01:16,19,2020-11-20,Mia White,Business Analyst
+2025-03-10 17:01:16,20,2023-01-05,Noah Harris,Graphic Designer
+2025-03-10 17:01:16,21,2022-03-09,Olivia Martin,Content Writer
+"""2025-03-10 17:01:16""",22,2019-08-16,Peter Thompson,Technical Writer
+2025-03-10 17:01:16,23,"""2021-05-28""",Quinn Garcia,QA Engineer
+"""2025-03-10 17:01:16""",24,2020-12-01,"""Ryan Martinez""","""Network Engineer"""
+2025-03-10 17:01:16,25,2022-07-22,Sophia Robinson,System Administrator
+2025-03-10 17:01:16,26,2018-10-11,Thomas Clark,Database Administrator
+2025-03-10 17:01:16/,27,2023-04-17/,Ursula Rodriguez,"""Security Analyst"""
+2025-03-10 17:01:16/,28,2020-02-29,Victor Lewis/,DevOps Engineer
+2025-03-10 17:01:16,29,2021-09-06,Wendy Lee,Mobile Developer
+2025-03-10 17:01:16,30,2019-06-23,Xavier Walker,Frontend Developer
+2025-03-10 17:01:16/,31,"""2022-11-14""",Yvonne Hall,Backend Developer
+2025-03-10 17:01:16,32,2020-09-18,"""Zachary Allen""",Full Stack Developer
+2025-03-10 17:01:16/,33,2023-03-02,Abigail Young,UI Designer
+2025-03-10 17:01:16,34,2021-01-07,Benjamin Hernandez,Animator
+2025-03-10 17:01:16/,35,2019-12-30,Charlotte King,Video Editor
+2025-03-10 17:01:16,36,2022-06-04,Daniel Wright,Sound Engineer/
+2025-03-10 17:01:16,37,2020-07-26,Ella Lopez,Photographer
+2025-03-10 17:01:16,38,2021-11-21/,Finn Hill,Illustrator/
+2025-03-10 17:01:16/,39,2018-08-09,Gabriella Scott,Copywriter
+2025-03-10 17:01:16,40,2023-05-13,Henry Green,Social Media Manager
+2025-03-10 17:01:16,41,2020-04-02,Isabella Baker,Public Relations
+2025-03-10 17:01:16,42,"""2022-10-27""",Jack Adams,Event Planner
+2025-03-10 17:01:16,43,2019-07-19,Katherine Nelson,Recruiter
+2025-03-10 17:01:16,44,2021-08-11,Lucas Carter,Training Specialist
+2025-03-10 17:01:16,45,2020-03-15,Madison Mitchell,Compliance Officer
+2025-03-10 17:01:16,46,"""2022-12-23""",Nathan Roberts,Risk Manager
+2025-03-10 17:01:16,47,2018-11-05,Oliver Turner,"""Actuary"""
+2025-03-10 17:01:16,48,2023-01-28,Penelope Phillips,Accountant
+2025-03-10 17:01:16/,49,2020-05-08,Quentin Campbell,Auditor
+2025-03-10 17:01:16,50,2021-10-03,Riley Parker,Tax Advisor
+2025-03-10 17:01:16,51,2019-09-22,Sebastian Evans,Investment Analyst
+2025-03-10 17:01:16/,52,2022-04-15,Taylor Edwards,Budget Analyst
+2025-03-10 17:01:16,53,2020-01-20,Ulysses Collins,Economist
+"""2025-03-10 17:01:16""",54,2023-06-10,Victoria Stewart,"""Mathematician"""
+2025-03-10 17:01:16,55,2021-02-13,William Sanchez,Statistician
+"""2025-03-10 17:01:16""",56,2019-03-07,Ximena Morris,"""Physicist"""
+"""2025-03-10 17:01:16""",57,2022-08-19,Yara Rogers,Chemist
+2025-03-10 17:01:16,58,2020-10-25,"""Zane Reed""",Biologist
+2025-03-10 17:01:16,59,2023-02-21,Aaliyah Cook/,Geologist
+2025-03-10 17:01:16,60,2021-04-08,Brandon Morgan,Astronomer
+2025-03-10 17:01:16,61,2019-05-16,Caitlyn Bell,Meteorologist
+2025-03-10 17:01:16,62,2022-09-11,Dominic Bailey,Environmental Scientist
+2025-03-10 17:01:16,63,2020-11-08,Elena Rivera,Marine Biologist
+"""2025-03-10 17:01:16""",64,2023-03-17,"""Felix Cooper""",Botanist
+"""2025-03-10 17:01:16""",65,2021-06-01,Genevieve Richardson,Zoologist
+2025-03-10 17:01:16/,66,2019-01-14,Hugo Howard,Anthropologist
+2025-03-10 17:01:16,67,2022-07-07,"""Iris Ward""",Archaeologist
+2025-03-10 17:01:16,68,2020-08-23,Jasper Torres,Paleontologist
+2025-03-10 17:01:16,69,2023-04-03,Kira Peterson/,Geneticist
+2025-03-10 17:01:16,70,2021-03-30,Leo Gray,"""Neuroscientist"""
+2025-03-10 17:01:16,71,2019-10-28,"""Maya Ramirez""",Psychologist
+2025-03-10 17:01:16,72,2022-11-17,"""Nolan James""",Sociologist
+2025-03-10 17:01:16,73,2020-12-10,Ophelia Watson,Political Scientist
+2025-03-10 17:01:16,74,2023-05-04/,Paxton Brooks,Historian/
+2025-03-10 17:01:16,75,2021-05-25,Quiana Kelly,Linguist
+"""2025-03-10 17:01:16""",76,2019-02-18,Rory Sanders,Philosopher
+2025-03-10 17:01:16,77,2022-08-12,"""Sierra Price""",Theologian/
+2025-03-10 17:01:16,78,2020-09-05,"""Trenton Bennett""",Lawyer
+2025-03-10 17:01:16,79,2023-06-21/,Uma Wood,Judge
+2025-03-10 17:01:16/,80,2021-07-28,Vance Barnes,Paralegal
+2025-03-10 17:01:16/,81,2019-04-21,Willow Ross,Police Officer
+"""2025-03-10 17:01:16""",82,2022-10-10/,Xander Henderson,Firefighter
+"""2025-03-10 17:01:16""",83,2020-11-03,Yasmin Coleman,Paramedic
+2025-03-10 17:01:16,84,2023-01-17,Zion Jenkins,Doctor
+2025-03-10 17:01:16/,85,2021-08-06,Anya Perry,Nurse
+2025-03-10 17:01:16/,86,2019-06-13,Bryce Powell,Pharmacist
+2025-03-10 17:01:16,87,2022-09-28,Celeste Long,Dentist
+2025-03-10 17:01:16,88,2020-12-21,Dante Patterson,Optometrist
+2025-03-10 17:01:16,89,"""2023-02-03""",Esme Hughes,Veterinarian
+2025-03-10 17:01:16,90,2021-09-20,Flynn Flores,Chef
+2025-03-10 17:01:16,91,2019-07-07,Gia Washington,Baker/
+2025-03-10 17:01:16/,92,2022-10-23,Holden Butler,Bartender
+2025-03-10 17:01:16,93,2020-01-26,Imani Simmons,Waiter
+2025-03-10 17:01:16,94,2023-03-22,"""Jared Foster""",Barista
+2025-03-10 17:01:16,95,2021-10-15,Kiana Gonzales,Hair Stylist
+2025-03-10 17:01:16,96,2019-08-03,Levi Bryant,Makeup Artist
+2025-03-10 17:01:16,97,2022-11-06,Mila Alexander,Personal Trainer
+2025-03-10 17:01:16/,98,"""2020-02-19""",Nico Russell,Yoga Instructor
+2025-03-10 17:01:16,99,2023-04-28,Oriana Griffin/,Dance Teacher
+2025-03-10 17:01:16,100,2021-11-12,Pierce Diaz,Music Teacher/

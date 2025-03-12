@@ -1,4 +1,4 @@
-from flask import Flask, request, jsonify, render_template
+from flask import Flask, request, jsonify, render_template, send_file
 import json
 from flask_cors import CORS
 import sqlite3
@@ -125,11 +125,15 @@ def yearly_data():
 def guide_one():
     
     return render_template("ws1.html")
-    
 
-@app.route("/test")
-def test():
-    return render_template("test.html")
+@app.route("/guides/workshop-two") 
+def guide_two():
+    return render_template("ws2.html")
+    
+@app.route('/download')
+def download():
+    path = './Week 2 Adv. Excel Data-20250312T215324Z-001.zip'
+    return send_file(path, as_attachment=True)
 
 if __name__ == "__main__":
     app.run(port=8080, debug=True)
