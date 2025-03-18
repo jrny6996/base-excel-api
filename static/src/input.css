@@ -1,9 +1,8 @@
 @import "tailwindcss";
-@config "./tailwind.config.js";
 
 /* 
 run to have changes watched
-
+npm i -D daisyui@latest
 npx @tailwindcss/cli -i ./static/src/input.css -o ./static/output.css --watch
 
 */

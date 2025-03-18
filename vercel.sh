@@ -8,9 +8,8 @@ if [[ -f "requirements.txt" ]]; then
 
 fi
 
-
-npm install tailwindcss @tailwindcss/cli --save-dev
 npm i -D daisyui@latest
+npm install tailwindcss @tailwindcss/cli --save-dev
 
 npx @tailwindcss/cli -i ./static/src/input.css -o ./static/dist/output.css
 
