@@ -1283,6 +1283,9 @@
   .text-neutral-content {
     color: var(--color-neutral-content);
   }
+  .text-white {
+    color: var(--color-white);
+  }
   .underline {
     text-decoration-line: underline;
   }
