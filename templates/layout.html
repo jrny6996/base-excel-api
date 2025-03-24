@@ -7,8 +7,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="{{url_for('static',filename='dist/output.css')}}">
+  <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-
   <script src="https://unpkg.com/htmx.org@2.0.4"
     integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+"
     crossorigin="anonymous"></script>
@@ -17,47 +17,46 @@
 
 
   {% endblock %}
-</head data-theme="cupcake">
 
 
-<div class="navbar shadow-sm fixed z-10 bg-zinc-900 border-b border-zinc-800">
-  <div class="navbar-start">
+  <div class="navbar shadow-sm fixed z-10 bg-zinc-900 border-b border-zinc-800">
+    <div class="navbar-start">
 
-    <a class="text-xl max-md:text-sm" href="/">Base Excel Workshop</a>
+      <a class="text-xl max-md:text-sm" href="/">Base Excel Workshop</a>
+    </div>
+    <div class="navbar-center hidden lg:flex">
+
+    </div>
+    <div class="navbar-end max-md:text-sm">
+      <a class="btn" href="/guides">View Guides</a>
+    </div>
   </div>
-  <div class="navbar-center hidden lg:flex">
+  <div class="h-16">
 
   </div>
-  <div class="navbar-end max-md:text-sm">
-    <a class="btn" href="/guides">View Guides</a>
-  </div>
-</div>
-<div class="h-16">
+  <!-- conter -->
+  <div id="content" class="container">{% block content %}{% endblock %}</div>
+  <div class="h-28"></div>
+  <!-- footer -->
+  <footer
+    class="footer sm:footer-horizontal  bg-zinc-900 border-t border-zinc-800 text-neutral-content w-screen items-center p-4 py-2 mt-32 fixed bottom-0">
+    <aside class="grid-flow-col items-center">
 
-</div>
-<!-- conter -->
-<div id="content" class="container">{% block content %}{% endblock %}</div>
-<div class="h-28"></div>
-<!-- footer -->
-<footer
-  class="footer sm:footer-horizontal  bg-zinc-900 border-t border-zinc-800 text-neutral-content w-screen items-center p-4 py-2 mt-32 fixed bottom-0">
-  <aside class="grid-flow-col items-center">
+      <a href="https://myrbs.business.rutgers.edu/undergraduate-newark/business-association-supply-expertise"
+        target="_blank">
+        <h3 class="underline">Rutgers Newark BASE </h3>
+      </a>
+    </aside>
+    <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+      <a href="https://www.instagram.com/itsallaboutbase/" target="_blank">
+        <img src="{{ url_for('static', filename='/icons/ig_icon.svg') }}" alt="Your SVG Image"
+          class="object-contain opacity-60 h-8 hover:opacity-100">
+      </a>
 
-    <a href="https://myrbs.business.rutgers.edu/undergraduate-newark/business-association-supply-expertise"
-      target="_blank">
-      <h3 class="underline">Rutgers Newark BASE </h3>
-    </a>
-  </aside>
-  <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
-    <a href="https://www.instagram.com/itsallaboutbase/" target="_blank">
-      <img src="{{ url_for('static', filename='/icons/ig_icon.svg') }}" alt="Your SVG Image"
-        class="object-contain opacity-60 h-8 hover:opacity-100">
-    </a>
-
-  </nav>
-</footer>
+    </nav>
+  </footer>
 
 
-</body>
+  </body>
 
 </html>
