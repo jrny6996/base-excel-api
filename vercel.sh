@@ -12,7 +12,7 @@ fi
 npm install tailwindcss @tailwindcss/cli --save-dev
 npm i -D daisyui@latest
 
-npx @tailwindcss/cli -i ./static/src/input.css -o ./static/output.css
+npx @tailwindcss/cli -i ./static/src/input.css -o ./static/dist/output.css
 
 # Flask setup (optional — adjust as needed)
 export FLASK_APP=app.py
