@@ -1035,9 +1035,6 @@
   .hidden {
     display: none;
   }
-  .inline {
-    display: inline;
-  }
   .table {
     display: table;
   }
@@ -1431,7 +1428,10 @@ html {
 section {
   margin-block: calc(var(--spacing) * 8);
   @media (width < 40rem) {
-    margin-inline: calc(var(--spacing) * 8);
+    width: 100%;
+  }
+  @media (width < 40rem) {
+    padding-inline: calc(var(--spacing) * 8);
   }
   @media (width >= 40rem) {
     margin-inline: auto;
