@@ -8,11 +8,11 @@ if [[ -f "requirements.txt" ]]; then
 
 fi
 # Install Node dependencies
-npm install
+npm init -y
 
 npm install tailwindcss @tailwindcss/cli
 
-npx @tailwindcss/cli -i ./static/src/input.css -o ./static/dist/output.css --watch
+npx @tailwindcss/cli -i ./static/src/input.css -o ./static/dist/output.css
 
 # Flask setup (optional — adjust as needed)
 export FLASK_APP=app.py
