@@ -1,69 +1,61 @@
 <!doctype html>
-<html>
-  <head>
-    {% block head %}
-    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
-    <title>{% block title %}{% endblock %} - My Webpage</title>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- boostrap styles -->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
-        <link rel="stylesheet" href="../static/styles.css">
-    {% endblock %}
-  </head>
-  <body>
-    <div  >
-        <header class="p-3 text-bg-dark">
-            <div class="container">
-              <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
-                <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 text-white text-decoration-none">
-                    <!-- needs styling -->
-                  <!-- <img src="../static/images/base-logo.png"  alt="base logo" class=""> -->
-                </a>
-        
-                <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
-                  <li><a href="/" class="nav-link px-2 text-secondary">Home</a></li>
-                  <li><a href="/guides" class="nav-link px-2 text-white">Guides</a></li>
-                </ul>
-        
-                <!-- <form class="col-12 col-lg-auto mb-3 mb-lg-0 me-lg-3" role="search">
-                  <input type="search" class="form-control form-control-dark text-bg-dark" placeholder="Search..." aria-label="Search">
-                </form>
-        
-                <div class="text-end">
-                  <button type="button" class="btn btn-outline-light me-2">Login</button>
-                  <button type="button" class="btn btn-warning">Sign-up</button>
-                </div> -->
-              </div>
-            </div>
-          </header>
+<html lang="en">
 
-      </div>
-      
-      
-      <div id="content" class="container">{% block content %}{% endblock %}</div>
-    
-    
-      <div id="footer" >
-      {% block footer %}
-      <div class="container">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-          <div class="col-md-4 d-flex align-items-center">
-            <a href="/" class="mb-3 me-2 mb-md-0 text-body-secondary text-decoration-none lh-1">
-              <svg class="bi" width="30" height="24"><use xlink:href="#bootstrap"></use></svg>
-            </a>
-            <span class="mb-3 mb-md-0 text-body-secondary">© 2024 Company, Inc</span>
-          </div>
-      
-          <ul class="nav col-md-4 justify-content-end list-unstyled d-flex">
-            <li class="ms-3"><a class="text-body-secondary text-black" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#twitter"></use></svg></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#instagram"></use></svg></a></li>
-            <li class="ms-3"><a class="text-body-secondary" href="#"><svg class="bi" width="24" height="24"><use xlink:href="#facebook"></use></svg></a></li>
-          </ul>
-        </footer>
-      </div>
-      <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-      {% endblock %}
-    </div>
-  </body>
+<head>
+  {% block head %}
+  <title>Base Advanced Excel</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="{{url_for('static',filename='dist/output.css')}}">
+  <script src="https://unpkg.com/htmx.org@2.0.4"
+    integrity="sha384-HGfztofotfshcF7+8n44JQL2oJmowVChPTg48S+jvZoztPfvwD79OC/LTtG6dMp+"
+    crossorigin="anonymous"></script>
+
+
+
+
+  {% endblock %}
+</head data-theme="cupcake">
+
+
+<div class="navbar shadow-sm fixed z-10 bg-zinc-900 border-b border-zinc-800">
+  <div class="navbar-start">
+
+    <a class="text-xl max-md:text-sm" href="/">Base Excel Workshop</a>
+  </div>
+  <div class="navbar-center hidden lg:flex">
+
+  </div>
+  <div class="navbar-end max-md:text-sm">
+    <a class="btn" href="/guides">View Guides</a>
+  </div>
+</div>
+<div class="h-16">
+
+</div>
+<!-- conter -->
+<div id="content" class="container">{% block content %}{% endblock %}</div>
+<div class="h-28"></div>
+<!-- footer -->
+<footer
+  class="footer sm:footer-horizontal  bg-zinc-900 border-t border-zinc-800 text-neutral-content w-screen items-center p-4 py-2 mt-32 fixed bottom-0">
+  <aside class="grid-flow-col items-center">
+
+    <a href="https://myrbs.business.rutgers.edu/undergraduate-newark/business-association-supply-expertise"
+      target="_blank">
+      <h3 class="underline">Rutgers Newark BASE </h3>
+    </a>
+  </aside>
+  <nav class="grid-flow-col gap-4 md:place-self-center md:justify-self-end">
+    <a href="https://www.instagram.com/itsallaboutbase/" target="_blank">
+      <img src="{{ url_for('static', filename='/icons/ig_icon.svg') }}" alt="Your SVG Image"
+        class="object-contain opacity-60 h-8 hover:opacity-100">
+    </a>
+
+  </nav>
+</footer>
+
+
+</body>
+
 </html>

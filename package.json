@@ -6,9 +6,13 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:production": "python main.py"
-
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@tailwindcss/cli": "^4.0.15",
+    "daisyui": "^5.0.9",
+    "tailwindcss": "^4.0.15"
+  }
 }

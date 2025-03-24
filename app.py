@@ -81,7 +81,9 @@ def index():
 
 @app.route("/guides", methods=["GET"])
 def guides():
-    return render_template("guides.html")
+    with open('guides.json') as f:
+        guide_data = json.load(f)
+    return render_template("guides.html", guides = guide_data)
 
 # API routes
 @app.route("/api/january", methods=["POST"])
@@ -118,22 +120,43 @@ def yearly_data():
         return jsonify({"purchases": purchases, "employees": employees, "customers": customers})
     else:
         return jsonify({"message": "Sorry, there was an error accessing your material"}), 403
-    
+
+
+import markdown
+
 
 
 @app.route("/guides/workshop-one") 
 def guide_one():
-    
-    return render_template("ws1.html")
+    markdown_file_path = os.path.join(app.root_path, 'ws1.md') # Get the absolute path
+
+    try:
+        with open(markdown_file_path, 'r', encoding='utf-8') as f:
+            markdown_content = f.read()
+        html_content = markdown.markdown(markdown_content, extensions=['fenced_code', 'codehilite']) #Add extensions
+        return render_template('ws1.html', content=html_content)
+    except FileNotFoundError:
+        return "Markdown file not found.", 404
 
 @app.route("/guides/workshop-two") 
 def guide_two():
-    return render_template("ws2.html")
-    
+    markdown_file_path = os.path.join(app.root_path, 'ws2.md') # Get the absolute path
+
+    try:
+        with open(markdown_file_path, 'r', encoding='utf-8') as f:
+            markdown_content = f.read()
+        html_content = markdown.markdown(markdown_content, extensions=['fenced_code', 'codehilite']) #Add extensions
+        return render_template('ws1.html', content=html_content)
+    except FileNotFoundError:
+        return render_template('ws1.html', content="Guide not found 404")   
 @app.route('/download')
 def download():
     path = './Week 2 Adv. Excel Data-20250312T215324Z-001.zip'
     return send_file(path, as_attachment=True)
+
+@app.route("/submit-form", methods = ["GET","POST"])
+def handle_form_submit():
+    return "<h2 class = 'text-green-500 text-lg'>Success! We'll reach out to you with events</h2>"
 
 if __name__ == "__main__":
     app.run(port=8080, debug=True)

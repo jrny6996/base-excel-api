@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+/* 
+run to have changes watched
+
+npx @tailwindcss/cli -i ./static/src/input.css -o ./static/dist/output.css --watch
+
+*/
+
+/* @plugin "daisyui"; */
+@plugin "daisyui" {
+  themes: light --default, dark --prefersdark, cupcake;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+}
+
+html {
+  @apply scroll-smooth;
+}
+
+.sectionContainer {
+  @apply flex-col justify-center  w-screen;
+}
+
+section {
+  @apply lg:w-[900px] md:w-[700px] sm:w-[500px] max-sm:mx-8 sm:mx-auto my-8;
+}
+h1 {
+  @apply my-2 text-4xl;
+}
+h2 {
+  @apply my-2 lg:text-3xl text-2xl  text-green-500;
+}
+h3 {
+  @apply my-2 text-xl text-emerald-700;
+}
+h4 {
+  @apply my-2 text-lg;
+}
+p {
+  @apply my-2 text-zinc-300;
+}
+
+.btn {
+  @apply bg-emerald-500 hover:bg-emerald-600 border border-emerald-700;
+}
+body {
+  @apply bg-zinc-900;
+}
+pre {
+  @apply bg-zinc-900 border border-zinc-700 p-4 rounded-2xl text-purple-300;
+}

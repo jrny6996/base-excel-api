@@ -11,100 +11,172 @@
 {% block content %}
 
 
-<div class="px-4 pt-5 my-5 text-center border-bottom">
-  <h1 class="display-4 fw-bold text-body-emphasis">BASE Advanced Excel Workshop</h1>
-  <div class="col-lg-6 mx-auto">
-    <p class="lead mb-4">Quickly design and customize responsive mobile-first sites with Bootstrap, the world’s most
-      popular front-end open source toolkit, featuring Sass variables and mixins, responsive grid system, extensive
-      prebuilt components, and powerful JavaScript plugins.</p>
-    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-      <button type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Primary button</button>
-      <button type="button" class="btn btn-outline-secondary btn-lg px-4">Secondary</button>
-    </div>
-  </div>
-  <div class="overflow-hidden" style="max-height: 30vh;">
-    <div class="container px-5">
-      <img src="../static/images/hero-alt.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image"
-        width="700" height="500" loading="lazy">
+<!-- Hero -->
+<div class="w-screen hero  min-h-screen bg-zinc-950">
+  <div class=" hero-content flex-col lg:flex-row-reverse space-x-16">
+    <img src="{{ url_for('static', filename='/images/hero_excel.png') }}" class="max-w-sm rounded-lg shadow-2xl" />
+    <div>
+      <h1 class="text-5xl font-bold">Elevate Your Supply Chain Career with Advanced Data Skills</h1>
+      <p class="py-6">
+        Earn a Rutgers Business School certification while learning advanced Excel, Python, and Power BI through the
+        BASE Advanced Excel Workshop
+      </p>
+      <a href="/#get-notified">
+        <button class="btn btn-primary">Get Started</button>
+      </a>
     </div>
   </div>
 </div>
 
-<div class="container">
-  <h3>About</h3>
-  <h2>BASE Advanced Excel Workshop</h2>
-  <p>
-    The Business Association of Supply Expertise(BASE) is a Rutgers Business School student organization focusing on
-    preparing students
-    for entering the world of supply chain. This program is created and ran by the Newark's BASE organization which
-    offeres the certification
-    for completion of the multi-week program and passing the organization administed exam. Student's participating in
-    the program
-    <strong>must complete BASE's Excel Level 1 program </strong>prior to joining the program. Anyone is welcome to
-    access materials in the
-    <a href="/guides">guides</a> section of this site to prepare for working with Excel as well as <a
-      href="https://sites.google.com/view/base2022/excel-workshops" target="_blank">Level One Excel content</a>
-    to help develop their skills, but will not be rewarded with certification unless they've completed the program.
+<!-- About -->
 
-  </p>
-  <!-- <form action="">
-            <h3>Register</h3>
-            <label for="net_id">Net ID:</label>
-           
-            <input type="text" name="" id="" required>
-            <label for="net_id">Name</label>
+<div class="sectionContainer">
+  <section>
+    <h3>About</h3>
+    <h2>BASE Advanced Excel Workshop</h2>
+    <p>
+      The Business Association of Supply Expertise(BASE) is a Rutgers Business School student organization focusing on
+      preparing students
+      for entering the world of supply chain. This program is created and ran by the Newark's BASE organization which
+      offeres the certification
+      for completion of the multi-week program and passing the organization administed exam. Student's participating
+      in
+      the program
+      <strong>must complete BASE's Excel Level 1 program </strong>prior to joining the program. Anyone is welcome to
+      access materials in the
+      <a href="/guides">guides</a> section of this site to prepare for working with Excel as well as <a
+        href="https://sites.google.com/view/base2022/excel-workshops" target="_blank">Level One Excel content</a>
+      to help develop their skills, but will not be rewarded with certification unless they've completed the program.
 
-            <input type="text" name="" id=" " required>
-            <label for="alt_email">Alternate Email</label>
+    </p>
+  </section>
+</div>
+<!-- showcase -->
+<div class="sectionContainer">
+  <section class="grid lg:grid-cols-2 gap-4">
+    <div>
+      <h3>Essential Data Skills</h3>
 
-            <input type="email" name="" id="" required>
-            <br>
-            <input type="submit" name="" id="" >
+      <h2>What You'll Learn</h2>
+      <p>This advanced workshop builds upon your Excel foundation, equipping you with powerful tools for data analysis
+        and manipulation. You'll dive into:</p>
+      <ul class="list-disc px-4 mt-4">
+        <li class=""><strong>Basic Python for Data Analysis:</strong> Learn the fundamentals of data fetching in Python,
+          a
+          versatile
+          language used extensively in data science.</li>
+        <li><strong>Advanced Excel Data Cleaning:</strong> Discover techniques to efficiently clean and prepare complex
+          datasets for analysis.</li>
+        <li><strong>Power BI Visualization:</strong> Explore Power BI to create interactive dashboards and compelling
+          data visualizations.</li>
+        <li><strong>Excel Macros for Automation:</strong> Automate repetitive tasks and streamline your workflow with
+          Excel macros.</li>
+      </ul>
+    </div>
+    <div class="carousel carousel-center rounded-box max-w-md space-x-4 p-4">
+      <div id="item1" class="carousel-item">
+        <img src="{{ url_for('static', filename='/images/excel_logo.png') }}"
+          class="rounded-box object-contain h-128 w-96 bg-black/30 p-20" />
+      </div>
 
-        </form> -->
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='/images/excel_sheet.png') }}"
+          class="rounded-box object-cover h-128 w-96" />
+      </div>
+      <div id="item2" class="carousel-item">
+        <img src="{{ url_for('static', filename='/images/python_logo.png') }}"
+          class="rounded-box object-contain h-128 w-96 bg-black/30 p-16" />
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='/images/Python_code.png') }}"
+          class="rounded-box object-cover h-128 w-96" />
+      </div>
+
+      <div id="item3" class="carousel-item">
+        <img src="{{ url_for('static', filename='/images/power_bi.png') }}"
+          class="rounded-box object-contain h-128 w-96 bg-black/30 p-20" />
+      </div>
+      <div class="carousel-item">
+        <img src="{{ url_for('static', filename='/images/power_bi_charts.jpg') }}"
+          class="rounded-box object-cover h-128 w-96" />
+      </div>
 
 
-  <h3>Overview</h3>
-  <h2>What to Expect</h2>
-  <p>
-    Throughout this program, students will gain skills working with data and the tools most widely used for such tasks
-    within a business setting.
-    The program will progressively build on prior weeks knowledge as well as final product.
-  <p>Students will learn:</p>
-  <ul>
-    <li>
-      fetching data with Python,
-    </li>
-    <li>
-      cleaning data with Excel functions
-    </li>
-    <li>
-      automating the process with macros
-    </li>
-    <li>
-      generating data visualizations with PowerBI
-    </li>
-    <li>
-      performing statistical calculation in Python+Excel
-    </li>
-  </ul>
-  These skills will be put to practical use in a final report of program's data which will automatically be generated
-  using VBA.
-  </p>
-  <h3>Getting started</h3>
-  <h2>First Day Materials</h2>
-  <p>RBS labs should come with required technology to complete this program. However, we ask students verify the machine
-    they are on has the
-    following software. Please refer to vendor website for any issues with setup or if in program follow setup steps
-    provided on screen.
-  <ul>
-    <li>Microsoft Office(Excel, PowerPoint, PowerBI)</li>
-    <li>Anaconda Spyder</li>
-    <li>Rutgers Box(optional for uploading data)</li>
-  </ul>
+    </div>
+    <div></div>
 
-  </p>
+    <!-- Navigation Buttons Below Carousel -->
+    <div class="flex w-full justify-center gap-2 py-2">
+      <a href="#item1" class="btn btn-xs">1</a>
+      <a href="#item2" class="btn btn-xs">2</a>
+      <a href="#item3" class="btn btn-xs">3</a>
+    </div>
 
+  </section>
+</div>
+
+<!-- features -->
+<div class="sectionContainer">
+  <section>
+    <div class="card lg:card-side bg-zinc-800 w-full border border-zinc-600 shadow-md lg:grid lg:grid-cols-2">
+      <figure>
+        <img src="{{ url_for('static', filename='/images/workshop_ex.png') }}" class="object-cover">
+      </figure>
+      <div class="card-body">
+        <h2>Workshop Experience</h2>
+        <h3>In-Person Workshops</h3>
+        <p>Engage in interactive, hands-on learning sessions led by experienced instructors. Our in-person workshops
+          provide a collaborative environment to practice your skills and receive personalized guidance.</p>
+
+        <h3>Rutgers Business School Certification</h3>
+        <p>Upon successful completion of the Advanced Excel Workshop and passing the organization-administered exam,
+          you'll receive a certification from the Rutgers Business School's Business Association of Supply Expertise
+          (BASE). This certification validates your proficiency in advanced Excel, Python, Power BI, and data analysis
+          skills, enhancing your professional portfolio.</p>
+        <div class="card-actions justify-end">
+          <a href="/guides"><button class="btn btn-primary">Get Started</button></a>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+<!-- requirements -->
+<div class="sectionContainer">
+  <section>
+    <h2>Requirements</h2>
+    <h3>Prerequisites</h3>
+    <p>To enroll in the Advanced Excel Workshop, participants must have successfully completed the BASE Excel Level 1
+      program. This ensures a foundational understanding of Excel basics, allowing us to delve into more advanced
+      concepts.</p>
+    <h3>Campus Availability</h3>
+    <p>Please note that the in-person workshops are exclusively available on the <strong>Rutgers Newark campus.</strong>
+    </p>
+  </section>
+</div>
+
+
+<!-- form -->
+<div class="sectionContainer">
+  <section id="get-notified">
+    <h2>Stay Connected</h2>
+    <h3>Follow BASE on Instagram</h3>
+    <p>Keep up-to-date with the latest workshop announcements, events, and resources by following the Rutgers Business
+      Association of Supply Expertise (BASE) on Instagram. Join our community and connect with fellow learners!</p>
+    <p><a href="https://www.instagram.com/itsallaboutbase/" target="_blank" class=" text-2xl">Follow us
+        @<span class="underline font-bold">itsallaboutbase</span></a></p>
+  </section>
+  <section class="bg-white text-black rounded-2xl p-8 !w-96 mx-auto">
+
+    <form action="" class="flex-col flex space-y-2" hx-get="/submit-form" hx-target="this" hx-swap="innerHTML">
+      <label for="email">Get notified on workshops via Email</label>
+      <input type="email" required class="border rounded px-2 py-1" placeholder="jxt3751@scarletmail.rutgers.edu">
+      <input type="submit" class="btn">
+
+    </form>
+    <div id="message">
+      <!-- The response will be inserted here -->
+    </div>
+  </section>
 </div>
 
 {% endblock %}
