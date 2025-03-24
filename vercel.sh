@@ -7,10 +7,10 @@ if [[ -f "requirements.txt" ]]; then
   
 
 fi
-# Install Node dependencies
-npm init -y
 
-npm install tailwindcss @tailwindcss/cli
+
+npm install tailwindcss @tailwindcss/cli --save-dev
+npm i -D daisyui@latest
 
 npx @tailwindcss/cli -i ./static/src/input.css -o ./static/dist/output.css
 
