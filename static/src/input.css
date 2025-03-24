@@ -10,7 +10,7 @@ npx @tailwindcss/cli -i ./static/src/input.css -o ./static/output.css --watch
 
 /* @plugin "daisyui"; */
 @plugin "daisyui" {
-  themes: light --default, dark --prefersdark, cupcake;
+  themes: light --default, dark --prefersdark;
 }
 
 @layer base {
