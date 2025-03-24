@@ -1286,6 +1286,9 @@
   .text-white {
     color: var(--color-white);
   }
+  .text-zinc-300 {
+    color: var(--color-zinc-300);
+  }
   .underline {
     text-decoration-line: underline;
   }
