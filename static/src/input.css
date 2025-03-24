@@ -61,7 +61,7 @@ p {
 }
 
 .btn {
-  @apply bg-emerald-500 hover:bg-emerald-600 border border-emerald-700;
+  @apply bg-emerald-500 hover:bg-emerald-600 border border-emerald-700 shadow-none;
 }
 body {
   @apply bg-zinc-900;

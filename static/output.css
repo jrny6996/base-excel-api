@@ -6,7 +6,6 @@
     --color-emerald-500: oklch(0.696 0.17 162.48);
     --color-emerald-600: oklch(0.596 0.145 163.225);
     --color-emerald-700: oklch(0.508 0.118 165.612);
-    --color-blue-500: oklch(0.623 0.214 259.815);
     --color-purple-300: oklch(0.827 0.119 306.383);
     --color-gray-200: oklch(0.928 0.006 264.531);
     --color-zinc-300: oklch(0.871 0.006 286.286);
@@ -1054,6 +1053,9 @@
   .h-128 {
     height: calc(var(--spacing) * 128);
   }
+  .min-h-\[100rem\] {
+    min-height: 100rem;
+  }
   .min-h-screen {
     min-height: 100vh;
   }
@@ -1200,17 +1202,8 @@
   .bg-zinc-900 {
     background-color: var(--color-zinc-900);
   }
-  .bg-zinc-950 {
-    background-color: var(--color-zinc-950);
-  }
   .bg-zinc-950\/50 {
     background-color: color-mix(in oklab, var(--color-zinc-950) 50%, transparent);
-  }
-  .bg-zinc-950\/80 {
-    background-color: color-mix(in oklab, var(--color-zinc-950) 80%, transparent);
-  }
-  .bg-zinc-950\/90 {
-    background-color: color-mix(in oklab, var(--color-zinc-950) 90%, transparent);
   }
   .object-contain {
     object-fit: contain;
@@ -1277,9 +1270,6 @@
   .font-bold {
     --tw-font-weight: var(--font-weight-bold);
     font-weight: var(--font-weight-bold);
-  }
-  .\!text-blue-500 {
-    color: var(--color-blue-500) !important;
   }
   .text-black {
     color: var(--color-black);
@@ -1480,6 +1470,8 @@ p {
   border-width: 1px;
   border-color: var(--color-emerald-700);
   background-color: var(--color-emerald-500);
+  --tw-shadow: 0 0 #0000;
+  box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   &:hover {
     @media (hover: hover) {
       background-color: var(--color-emerald-600);
