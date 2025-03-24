@@ -67,3 +67,6 @@ body {
 pre {
   @apply bg-zinc-900 border border-zinc-700 p-4 rounded-2xl text-purple-300;
 }
+code {
+  @apply max-sm:w-[300px] w-full max-sm:text-xs;
+}
