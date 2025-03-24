@@ -6,7 +6,7 @@ if [[ -f "requirements.txt" ]]; then
 fi
 
 # Install Node dependencies
-npm install tailwindcss @tailwindcss/cli --save-dev
+npm install
 
 # Build Tailwind CSS (no watch flag)
 npx tailwindcss -i ./static/src/input.css -o ./static/dist/output.css
