@@ -9,7 +9,7 @@ fi
 npm install
 
 # Build Tailwind CSS (no watch flag)
-npx tailwindcli -i ./static/src/input.css -o ./static/dist/output.css
+npx tailwind/cli -i ./static/src/input.css -o ./static/dist/output.css
 
 # Flask setup (optional — adjust as needed)
 export FLASK_APP=app.py
