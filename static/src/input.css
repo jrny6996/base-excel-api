@@ -34,11 +34,11 @@ npx @tailwindcss/cli -i ./static/src/input.css -o ./static/output.css --watch
 }
 
 html {
-  @apply scroll-smooth;
+  @apply scroll-smooth  bg-zinc-900;
 }
 
 .sectionContainer {
-  @apply flex-col justify-center  w-screen;
+  @apply flex-col justify-center  w-screen  bg-zinc-900;
 }
 
 section {
@@ -64,7 +64,7 @@ p {
   @apply bg-emerald-500 hover:bg-emerald-600 border border-emerald-700 shadow-none;
 }
 body {
-  @apply bg-zinc-900;
+  @apply bg-zinc-900 text-zinc-300;
 }
 pre {
   @apply bg-zinc-900 border border-zinc-700 p-4 rounded-2xl text-purple-300;
