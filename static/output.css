@@ -1203,6 +1203,15 @@
   .bg-zinc-950 {
     background-color: var(--color-zinc-950);
   }
+  .bg-zinc-950\/50 {
+    background-color: color-mix(in oklab, var(--color-zinc-950) 50%, transparent);
+  }
+  .bg-zinc-950\/80 {
+    background-color: color-mix(in oklab, var(--color-zinc-950) 80%, transparent);
+  }
+  .bg-zinc-950\/90 {
+    background-color: color-mix(in oklab, var(--color-zinc-950) 90%, transparent);
+  }
   .object-contain {
     object-fit: contain;
   }
