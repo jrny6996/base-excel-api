@@ -1,5 +1,4 @@
 @import "tailwindcss";
-@config "./tailwind.config.js";
 
 /* 
 run to have changes watched
@@ -11,6 +10,16 @@ npx @tailwindcss/cli -i ./static/src/input.css -o ./static/dist/output.css --wat
 /* @plugin "daisyui"; */
 @plugin "daisyui" {
   themes: light --default, dark --prefersdark, cupcake;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
 }
 
 @layer base {
