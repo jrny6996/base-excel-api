@@ -4,13 +4,14 @@
 if [[ -f "requirements.txt" ]]; then
   pip install -r requirements.txt
 
-  # Install Node dependencies
+  
+
+fi
+# Install Node dependencies
   npm install
 
   # Build Tailwind CSS (no watch flag)
-  npx tailwind/cli -i ./static/src/input.css -o ./static/dist/output.css
-
-fi
+  npx @tailwindcss/cli -i ./static/src/input.css -o ./static/dist/output.css --watch
 
 # Flask setup (optional — adjust as needed)
 export FLASK_APP=app.py
