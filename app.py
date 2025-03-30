@@ -89,7 +89,7 @@ def guides():
 @app.route("/api/january", methods=["POST"])
 def monthly_data():
     print(request.json)
-    if request.json["key"] == 1234:
+    if request.json["key"] == "1234ajsdhfkja12838":
         purchase_data = query_db("SELECT * FROM Purchases WHERE strftime('%m', purchase_date) = '01';")
         employee_data = query_db("SELECT * FROM Employees;")
         customer_data = query_db("SELECT * FROM Customers;")
@@ -106,7 +106,7 @@ def monthly_data():
 @app.route("/api/2024", methods=["POST"])
 def yearly_data():
     print(request.json)
-    if request.json["key"] == 1234:
+    if request.json["key"] == "1234ajsdhfkja12838":
         purchase_data = query_db("SELECT * FROM Purchases;")
         employee_data = query_db("SELECT * FROM Employees;")
         customer_data = query_db("SELECT * FROM Customers;")
@@ -134,7 +134,7 @@ def guide_one():
         with open(markdown_file_path, 'r', encoding='utf-8') as f:
             markdown_content = f.read()
         html_content = markdown.markdown(markdown_content, extensions=['fenced_code', 'codehilite']) #Add extensions
-        return render_template('ws1.html', content=html_content)
+        return render_template('workshop.html', content=html_content, video = "https://www.youtube.com/embed/YGKm_c3Yajk?si=EYL2KQBEXz47xh0R")
     except FileNotFoundError:
         return "Markdown file not found.", 404
 
@@ -146,9 +146,24 @@ def guide_two():
         with open(markdown_file_path, 'r', encoding='utf-8') as f:
             markdown_content = f.read()
         html_content = markdown.markdown(markdown_content, extensions=['fenced_code', 'codehilite']) #Add extensions
-        return render_template('ws1.html', content=html_content)
+        return render_template('workshop.html', content=html_content, additional_materials = "https://drive.google.com/drive/folders/174nR9kG8rFyEF-zsoapn75Pye9BzR12L?usp=sharing")
     except FileNotFoundError:
-        return render_template('ws1.html', content="Guide not found 404")   
+        return render_template('workshop.html', content="Guide not found 404")   
+    
+
+@app.route("/guides/workshop-three") 
+def guide_three():
+    markdown_file_path = os.path.join(app.root_path, 'ws3.md') # Get the absolute path
+
+    try:
+        with open(markdown_file_path, 'r', encoding='utf-8') as f:
+            markdown_content = f.read()
+        html_content = markdown.markdown(markdown_content, extensions=['fenced_code', 'codehilite']) #Add extensions
+        return render_template('workshop.html', content=html_content)
+    except FileNotFoundError:
+        return render_template('workshop.html', content="Guide not found 404") 
+
+
 @app.route('/download')
 def download():
     path = './Week 2 Adv. Excel Data-20250312T215324Z-001.zip'

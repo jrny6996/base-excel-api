@@ -61,11 +61,28 @@ p {
   @apply bg-emerald-500 hover:bg-emerald-600 border border-emerald-700 shadow-none;
 }
 body {
+  word-wrap: break-word; 
+
   @apply bg-zinc-900;
 }
 pre {
-  @apply bg-zinc-900 border border-zinc-700 p-4 rounded-2xl text-purple-300;
+  white-space: pre-wrap;  /* Wraps text but preserves white-space formatting */
+  word-wrap: break-word;  /* Ensures long words break to avoid overflow */
+  overflow: hidden;       /* Hides any overflow content */
+  width: 100%;            /* Ensures it doesn't exceed its container's width */
+  box-sizing: border-box;  
+  @apply bg-zinc-900 border border-zinc-700 p-4 rounded-2xl text-purple-300 flex whitespace-pre-wrap break-words overflow-hidden w-full box-border;
 }
 code {
-  @apply max-sm:w-[300px] w-full max-sm:text-xs;
+  white-space: nowrap;  /* Prevents line breaks within the code */
+  overflow: hidden;     /* Prevents overflow */
+  text-overflow: ellipsis;
+  @apply max-sm:w-[300px] ;
+}
+pre, code {
+  max-width: 100%;  /* Prevents content from exceeding the container width */
+  display: block;   /* Ensures block behavior (in case of inline styles) */
+}
+ul {
+  @apply list-disc
 }

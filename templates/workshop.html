@@ -11,25 +11,35 @@
 {% block content %}
 
 <div class="sectionContainer">
+ 
+
   <section
     class="bg-zinc-800 border border-zinc-700 p-8 rounded-2xl min-h-[100rem] text-zinc-300 max-sm:w-[300px] flex flex-col">
-
+    {% if additional_materials %}
+    <div class="bg-white rounded-2xl p-8 text-emerald-900 underline text-lg">
+      <a href={{additional_materials}} target="_blank">Download materials</a>
+    </div>
+    {% endif %}
+  
     {{ content | safe }}
 
 
   </section>
+  {% if video %}
   <section class="flex">
     <div class="rounded-lg mx-auto">
-      <iframe width="900" height="600" src="https://www.youtube.com/embed/YGKm_c3Yajk?si=EYL2KQBEXz47xh0R" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+      <iframe width="900" height="600" src={{video}} title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
     </div>
 
   </section>
+  {% endif %}
+
+  
   <section>
     <div class="bg-white rounded-2xl p-8 text-emerald-800 underline">
       <a href="https://forms.gle/HhXCNp3L2nrvVECf7" target="_blank">Fill out our survey!</a>
     </div>
   </section>
-
 </div>
 
 
