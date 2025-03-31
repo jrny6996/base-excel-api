@@ -1,4 +1,4 @@
-#!/Users/jonathanclark/Sites/base-excel-api/env/bin/python3.12
+#!/Users/jonathanclark/Sites/base-excel-api/env/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys

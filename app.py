@@ -133,7 +133,7 @@ def guide_one():
     try:
         with open(markdown_file_path, 'r', encoding='utf-8') as f:
             markdown_content = f.read()
-        html_content = markdown.markdown(markdown_content, extensions=['fenced_code', 'codehilite']) #Add extensions
+        html_content = markdown.markdown(markdown_content, extensions=['fenced_code']) #Add extensions
         return render_template('workshop.html', content=html_content, video = "https://www.youtube.com/embed/YGKm_c3Yajk?si=EYL2KQBEXz47xh0R")
     except FileNotFoundError:
         return "Markdown file not found.", 404
@@ -145,7 +145,7 @@ def guide_two():
     try:
         with open(markdown_file_path, 'r', encoding='utf-8') as f:
             markdown_content = f.read()
-        html_content = markdown.markdown(markdown_content, extensions=['fenced_code', 'codehilite']) #Add extensions
+        html_content = markdown.markdown(markdown_content, extensions=['fenced_code']) #Add extensions
         return render_template('workshop.html', content=html_content, additional_materials = "https://drive.google.com/drive/folders/174nR9kG8rFyEF-zsoapn75Pye9BzR12L?usp=sharing")
     except FileNotFoundError:
         return render_template('workshop.html', content="Guide not found 404")   
@@ -158,7 +158,7 @@ def guide_three():
     try:
         with open(markdown_file_path, 'r', encoding='utf-8') as f:
             markdown_content = f.read()
-        html_content = markdown.markdown(markdown_content, extensions=['fenced_code', 'codehilite']) #Add extensions
+        html_content = markdown.markdown(markdown_content, extensions=['fenced_code']) #Add extensions
         return render_template('workshop.html', content=html_content)
     except FileNotFoundError:
         return render_template('workshop.html', content="Guide not found 404") 
