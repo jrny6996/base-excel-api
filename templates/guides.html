@@ -22,15 +22,16 @@
     <div class="sectionContainer">
       <h2 class="text-center">View our guides</h2>
 
-      <section>
+      <section class="flex flex-col justify-center">
         {% for guide in guides %}
         <!-- guide start -->
-        <div class=" my-8 card bg-zinc-800 shadow-xs max-sm:mx-4 w-full border border-zinc-600 flex flex-col ">
+        <div class=" my-8 card bg-zinc-800 shadow-xs w-full border border-zinc-600 flex flex-col ">
           <figure class="object-contain h-24">
             <img src="{{ guide.image_url }}" alt="{{ guide.title }}" />
           </figure>
           <div class="card-body flex flex-col justify-between grow">
-            <h3 class="card-title flex justify-between items-center text-2xl! text-emerald-500! hover:text-emerald-300! underline">
+            <h3
+              class="card-title flex justify-between items-center text-2xl! text-emerald-500! hover:text-emerald-300! underline">
               <a href="{{ guide.link }}">{{ guide.title }}</a>
             </h3>
             <p class="grow">{{ guide.description }}</p>
