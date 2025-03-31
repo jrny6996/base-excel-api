@@ -1,6 +1,6 @@
 # Workshop #2 Guide: Automating Tasks with Macros and VBA in Excel
 
-This document serves as a guide based on the "Workshop #2.mp4" video, outlining the process of using macros and VBA for automating tasks in Excel, particularly data cleaning and consolidation.
+This document serves as a guide based to workshop #2, outlining the process of using macros and VBA for automating tasks in Excel, particularly data cleaning and consolidation.
 
 ## Introduction to Macros
 
